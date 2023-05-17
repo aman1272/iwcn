@@ -7,6 +7,8 @@ const Navbar = (props) => {
     const [value, setValue] = useState('')
 
     const handleClick = () => {
+        if (value == "") alert("Empty field will not accepted then please enter numbers")
+
         props.getData(value)
         setValue("")
     }
@@ -23,7 +25,7 @@ const Navbar = (props) => {
                     <CForm inline className="d-flex" >
                         <CFormInput
                             className="mr-sm-2"
-                            placeholder="Enter here Phone Number"
+                            placeholder="Enter here"
                             size="sm"
                             type="number"
                             value={value}
